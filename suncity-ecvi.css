@@ -1,62 +1,196 @@
 /* =========================================================
    SUN CITY — ECVI BOOKING WIDGET
-   Custom styles for the ECVI booking widget on the hotel site
    ========================================================= */
 
-/* Main search container */
+/* Прозрачный фон iframe — убирает белые области по бокам и снизу */
+html,
+body,
+.wrapper,
+.maincontent,
+.booking-content,
+#ecvi-booking-container {
+    background: transparent !important;
+}
+
+/* Основная панель поиска */
 #ecvi-booking-container .search-container {
     font-size: 0;
     padding: 18px 24px;
-    background: #C4B195;
-    border-radius: 22px;
+    background: #BFAD94 !important;
+    border-radius: 22px !important;
 }
 
-/* Labels above arrival/departure fields */
+/* Подписи «Выберите дату заезда / выезда» */
 #ecvi-booking-container
 .search-container
 .search-container-item
 .header {
-    color: #5B3C22;
+    color: #6E573D !important;
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
 }
 
-/* Date/time display block */
-#ecvi-booking-container .date-info-block {
-    background: #F7F1E8;
-    color: #5B3C22;
-    border-radius: 12px;
+/* Поля даты и времени */
+#ecvi-booking-container
+.widget-date-container
+.calendar-container
+label
+.date-info-block {
+    background: #F7F1E8 !important;
+    color: #2C1F0E !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
 }
 
-/* Date picker field */
+/* Даты и время */
+#ecvi-booking-container
+.date-info-block__date,
+#ecvi-booking-container
+.date-info-block__time {
+    color: #2C1F0E !important;
+}
+
+/* Иконка календаря */
+#ecvi-booking-container
+.date-info-block__date::after {
+    background: #2C1F0E !important;
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/calendar.png")
+        center / contain no-repeat;
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/calendar.png")
+        center / contain no-repeat;
+}
+
+/* Иконка часов */
+#ecvi-booking-container
+.date-info-block__time::after {
+    background: #2C1F0E !important;
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/clock.png")
+        center / contain no-repeat;
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/clock.png")
+        center / contain no-repeat;
+}
+
+/* Скрытое поле выбора даты */
 #ecvi-booking-container .widget-choose-date {
-    background: #F7F1E8;
-    color: #5B3C22;
-    border-radius: 12px;
+    background: #F7F1E8 !important;
+    color: #2C1F0E !important;
+    border-radius: 12px !important;
 }
 
-/* Search button */
+/* Кнопка поиска */
 #ecvi-booking-container #new-search {
-    background: #B58F6B;
-    border: none;
-    border-radius: 12px;
+    background: #B58F6B !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
 }
 
-/* Search button text */
-#ecvi-booking-container #new-search .new-search__text,
-#ecvi-booking-container #new-search .book-text {
+/* Скрываем исходную надпись «Новый поиск» */
+#ecvi-booking-container #new-search .new-search-text,
+#ecvi-booking-container #new-search .new-search__text {
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+/* Показываем «НАЙТИ НОМЕР» */
+#ecvi-booking-container #new-search .new-search-text::after,
+#ecvi-booking-container #new-search .new-search__text::after {
+    content: "НАЙТИ НОМЕР";
     color: #FFFFFF;
+    font-size: 16px;
     font-weight: 600;
 }
 
-/* Search button hover */
+/* Кнопка при наведении */
 #ecvi-booking-container #new-search:hover {
-    background: #9F7958;
+    background: #9F7958 !important;
 }
 
-/* Remove heavy shadows inside the search widget */
-#ecvi-booking-container .search-container *,
-#ecvi-booking-container #new-search {
+/* Убираем лишние тени внутри поисковой панели */
+#ecvi-booking-container .search-container * {
     box-shadow: none;
+}
+
+
+/* =========================================================
+   СТРАНИЦА С РЕЗУЛЬТАТАМИ БРОНИРОВАНИЯ
+   ========================================================= */
+
+/* Фон области под поисковой панелью */
+#ecvi-booking-container .tarif-selection-container,
+#ecvi-booking-container .avaliable-rate-container,
+#ecvi-booking-container .rooms-section,
+#ecvi-booking-container .section-header-container,
+#ecvi-booking-container
+.section-header-container
+.section-header {
+    background-color: #EBDFD8 !important;
+}
+
+/* Золотая линия около заголовков разделов */
+#ecvi-booking-container
+.section-header-container::after {
+    background: #C9954A !important;
+}
+
+/* «Доступные места / Доступные номера» */
+#ecvi-booking-container
+.section-header-container
+.section-header {
+    color: #2B2118 !important;
+}
+
+/* Названия категорий номеров */
+#ecvi-booking-container
+.avaliable-item
+.avaliable-item-block
+.avaliable-item-description
+.description
+.header,
+
+#ecvi-booking-container
+.avaliable-item-block
+.header.header-name-mobile {
+    color: #2B2118 !important;
+}
+
+/* «Площадь», «Вместимость» и аналогичные подписи */
+#ecvi-booking-container
+.avaliable-item
+.additional-info-list
+.additional-info-item
+.header {
+    color: #2B2118 !important;
+}
+
+/* Кнопка «Цены и условия» */
+#ecvi-booking-container
+.avaliable-item
+.avaliable-item-description
+.description
+.more-detail {
+    color: #2B2118 !important;
+    border-color: #2B2118 !important;
+}
+
+/* Надпись «ОТ» около цены */
+#ecvi-booking-container
+.avaliable-item
+.price-block
+.price-period {
+    color: #2B2118 !important;
+}
+
+
+/* Мобильная версия */
+@media screen and (max-width: 867px) {
+    #ecvi-booking-container .search-container {
+        padding: 16px !important;
+        border-radius: 16px !important;
+    }
 }
