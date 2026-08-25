@@ -194,3 +194,383 @@ label
         border-radius: 16px !important;
     }
 }
+/* =========================================================
+   SUN CITY — ДОРАБОТКА ЦВЕТОВ И ФОРМЫ ВЫБОРА
+   ========================================================= */
+
+/* Линия под виджетом */
+#ecvi-booking-container
+.section-header-container::after {
+    background: #2B2118 !important;
+}
+
+/* Стрелка рядом с «Доступные места / Доступные номера» */
+#ecvi-booking-container
+.section-header-container
+.section-header::after {
+    background: #2B2118 !important;
+
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/arrow.png")
+        center / contain no-repeat;
+
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/arrow.png")
+        center / contain no-repeat;
+}
+
+/* Значения после «Площадь» и «Вместимость» */
+#ecvi-booking-container
+.avaliable-item
+.additional-info-list
+.additional-info-item
+.text {
+    color: #4A3A2E !important;
+}
+
+
+/* =========================================================
+   ИКОНКИ УДОБСТВ
+   ========================================================= */
+
+#ecvi-booking-container
+.options-icons-list
+.options-icons-item {
+    --option-icon-position: 1px 3px;
+
+    background: none !important;
+}
+
+/* Перекрашиваем спрайт иконок точно в #4A3A2E */
+#ecvi-booking-container
+.options-icons-list
+.options-icons-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: #4A3A2E;
+
+    -webkit-mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/hotel_options.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: var(--option-icon-position);
+
+    mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/hotel_options.png");
+    mask-repeat: no-repeat;
+    mask-position: var(--option-icon-position);
+}
+
+#ecvi-booking-container .options-icons-item.wi-fi {
+    --option-icon-position: 1px 3px;
+}
+
+#ecvi-booking-container .options-icons-item.drier {
+    --option-icon-position: -77px -22px;
+}
+
+#ecvi-booking-container .options-icons-item.wardrobe {
+    --option-icon-position: -103px -22px;
+}
+
+#ecvi-booking-container .options-icons-item.minibar {
+    --option-icon-position: -25px -98px;
+}
+
+#ecvi-booking-container .options-icons-item.phone {
+    --option-icon-position: -77px 2px;
+}
+
+#ecvi-booking-container .options-icons-item.iron {
+    --option-icon-position: -25px -46px;
+}
+
+#ecvi-booking-container .options-icons-item.bathrobe {
+    --option-icon-position: -77px -51px;
+}
+
+#ecvi-booking-container .options-icons-item.roomservice {
+    --option-icon-position: -77px -98px;
+}
+
+#ecvi-booking-container .options-icons-item.conditioner {
+    --option-icon-position: -25px 1px;
+}
+
+#ecvi-booking-container .options-icons-item.vault {
+    --option-icon-position: -25px -72px;
+}
+
+#ecvi-booking-container .options-icons-item.bed {
+    --option-icon-position: -51px 3px;
+}
+
+#ecvi-booking-container .options-icons-item.tv {
+    --option-icon-position: -103px 1px;
+}
+
+#ecvi-booking-container .options-icons-item.animals {
+    --option-icon-position: -51px -22px;
+}
+
+
+/* =========================================================
+   ЦЕНЫ И ТАРИФЫ
+   ========================================================= */
+
+/* Верхняя цена «от 3990 руб.» */
+#ecvi-booking-container .resource-start-price,
+#ecvi-booking-container .resource-start-price *,
+#ecvi-booking-container .resource-start-price-mobile,
+#ecvi-booking-container .resource-start-price-mobile * {
+    color: #4A3A2E !important;
+}
+
+/* Цена внутри раскрытого тарифа */
+#ecvi-booking-container .tarif-start-price,
+#ecvi-booking-container .tarif-start-price * {
+    color: #4A3A2E !important;
+}
+
+/* «Тарифы и цены» */
+#ecvi-booking-container
+.avaliable-item
+.description.detailed-price
+.header-stripe {
+    color: #2B2118 !important;
+}
+
+/* Линия рядом с «Тарифы и цены» */
+#ecvi-booking-container
+.avaliable-item
+.description.detailed-price
+.header-stripe-container::after {
+    background: #2B2118 !important;
+}
+
+/* «Стандарт с завтраком» */
+#ecvi-booking-container
+.resource-tarif
+.tarif-name {
+    color: #4A3A2E !important;
+}
+
+/* Стрелка рядом с «Цены и условия» */
+#ecvi-booking-container
+.avaliable-item
+.more-detail::after {
+    background: #2B2118 !important;
+
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/detailed-arrow.png")
+        center / contain no-repeat;
+
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/detailed-arrow.png")
+        center / contain no-repeat;
+}
+
+
+/* =========================================================
+   НИЖНЯЯ ПАНЕЛЬ ВЫБОРА
+   ========================================================= */
+
+/* Фон — как у поискового виджета */
+#ecvi-booking-container
+.booking-header-info {
+    background: #BFAD94 !important;
+}
+
+/* «Выбрано» и итоговая цена */
+#ecvi-booking-container
+.booking-header-info
+.result-section > span,
+
+#ecvi-booking-container
+.booking-header-info
+.price-num {
+    color: #2C1F0E !important;
+}
+
+/* Выбранные параметры — как поля виджета */
+#ecvi-booking-container
+.booking-header-info
+.result-section-item {
+    background: #F7F1E8 !important;
+    color: #2C1F0E !important;
+}
+
+/* Скрываем четвёртую плашку — «Без питания» */
+#ecvi-booking-container
+.booking-header-info
+.result-section-item:nth-child(4) {
+    display: none !important;
+}
+
+/* Красную кнопку сохраняем */
+#ecvi-booking-container
+.booking-header-info
+.go-to-payment {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   ФОРМА ПОСЛЕ НАЖАТИЯ «ВЫБРАТЬ»
+   ========================================================= */
+
+#ecvi-booking-container
+.select-resource-container {
+    color: #4A3A2E !important;
+}
+
+/* Блок с количеством гостей и ценой */
+#ecvi-booking-container
+.price-info-container
+.price-categories-item {
+    background: #F7F1E8 !important;
+    border-color: #BFAD94 !important;
+}
+
+#ecvi-booking-container
+.price-categories-item
+.quant,
+
+#ecvi-booking-container
+.price-categories-item
+.price {
+    color: #4A3A2E !important;
+}
+
+/* Иконка гостя в блоке цены */
+#ecvi-booking-container
+.categories-image-container img {
+    display: none !important;
+}
+
+#ecvi-booking-container
+.categories-image-container::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+
+    background: #4A3A2E;
+
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/man.png")
+        center / contain no-repeat;
+
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/man.png")
+        center / contain no-repeat;
+}
+
+/* Поля «1 взрослый» и «Добавить ребёнка» */
+#ecvi-booking-container
+.pseudo-select-container,
+
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-container-results {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+}
+
+#ecvi-booking-container
+.pseudo-select-container
+.choosen-type,
+
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-item {
+    color: #4A3A2E !important;
+}
+
+/* Иконка человека в поле */
+#ecvi-booking-container
+.pseudo-select-container::after {
+    background: #4A3A2E !important;
+
+    -webkit-mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/man.png")
+        center / contain no-repeat;
+
+    mask:
+        url("https://ecvi.rt.ru/assets/formreservation/img/man.png")
+        center / contain no-repeat;
+}
+
+/* Выбранный пункт и наведение */
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-item:hover,
+
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-item.active {
+    background: #BFAD94 !important;
+    color: #2B2118 !important;
+}
+
+/* Кнопка добавления ещё одного обычного номера */
+#ecvi-booking-container
+.select-block-button-container
+.add-one {
+    background: #B58F6B !important;
+    color: #FFFFFF !important;
+}
+
+/* «Забронировать» оставляем красной */
+#ecvi-booking-container
+.select-block-button-container
+.proceed {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+/* Кнопка «Назад» */
+#ecvi-booking-container
+.select-block-button-container
+.refuse-one {
+    background: #F7F1E8 !important;
+    color: #2B2118 !important;
+    border-color: #2B2118 !important;
+}
+
+
+/* =========================================================
+   ОГРАНИЧЕНИЯ ТОЛЬКО ДЛЯ КОЙКО-МЕСТ
+   ========================================================= */
+
+/*
+   У койко-мест data-parentid содержит номер.
+   У обычных номеров data-parentid="false".
+*/
+
+/* Скрываем выбор ребёнка только у койко-мест */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.child-selection {
+    display: none !important;
+}
+
+/* Скрываем «Добавить ещё одно место» только у койко-мест */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+#addOne {
+    display: none !important;
+}
+
+/* Убираем пустой контейнер от скрытой кнопки */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.select-block-button-container:has(> #addOne) {
+    display: none !important;
+}
