@@ -1,0 +1,62 @@
+/* =========================================================
+   SUN CITY — ECVI BOOKING WIDGET
+   Custom styles for the ECVI booking widget on the hotel site
+   ========================================================= */
+
+/* Main search container */
+#ecvi-booking-container .search-container {
+    font-size: 0;
+    padding: 18px 24px;
+    background: #C4B195;
+    border-radius: 22px;
+}
+
+/* Labels above arrival/departure fields */
+#ecvi-booking-container
+.search-container
+.search-container-item
+.header {
+    color: #5B3C22;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+/* Date/time display block */
+#ecvi-booking-container .date-info-block {
+    background: #F7F1E8;
+    color: #5B3C22;
+    border-radius: 12px;
+}
+
+/* Date picker field */
+#ecvi-booking-container .widget-choose-date {
+    background: #F7F1E8;
+    color: #5B3C22;
+    border-radius: 12px;
+}
+
+/* Search button */
+#ecvi-booking-container #new-search {
+    background: #B58F6B;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Search button text */
+#ecvi-booking-container #new-search .new-search__text,
+#ecvi-booking-container #new-search .book-text {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Search button hover */
+#ecvi-booking-container #new-search:hover {
+    background: #9F7958;
+}
+
+/* Remove heavy shadows inside the search widget */
+#ecvi-booking-container .search-container *,
+#ecvi-booking-container #new-search {
+    box-shadow: none;
+}
