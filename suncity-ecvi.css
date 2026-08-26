@@ -936,3 +936,214 @@ label
 #booking-confirm:hover {
     background: #B53D35 !important;
 }
+/* =========================================================
+   SUN CITY — ИСПРАВЛЕНИЯ ВЫБРАННОГО МЕСТА
+   ========================================================= */
+
+/* Скрываем «Добавить номер другой категории»
+   только при выборе категории «Место в стандарте…» */
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container.shown
+) .add-another-category-room {
+    display: none !important;
+}
+
+/* Для места заменяем «1 КОМНАТА» на «1 МЕСТО» */
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container.shown
+) #finalResults .result-section-item:first-child {
+    font-size: 0 !important;
+}
+
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container.shown
+) #finalResults .result-section-item:first-child::after {
+    content: "1 МЕСТО";
+    color: #2B2118;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Текст «1 место, 1 взрослый, 1690 руб.» */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.choosen-block-info-list,
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.choosen-block-info-item {
+    color: #4A3A2E !important;
+}
+
+
+/* =========================================================
+   SUN CITY — ФОРМА ОФОРМЛЕНИЯ БРОНИРОВАНИЯ
+   ВАЖНО: она расположена вне #ecvi-booking-container
+   ========================================================= */
+
+/* Общий фон шага */
+.booking-content #payment-type-info {
+    background: transparent !important;
+    color: #4A3A2E !important;
+}
+
+/* Верхняя плашка «БРОНИРОВАНИЕ» */
+.booking-content #payment-type-info
+.booking_details > .container > .header {
+    background: #BFAD94 !important;
+    color: #2B2118 !important;
+    border-radius: 0 !important;
+}
+
+/* Заголовок и кнопка «Назад» */
+.booking-content #payment-type-info
+.booking_details > .container > .header *,
+.booking-content #payment-type-info .return-back {
+    color: #2B2118 !important;
+}
+
+/* Карточка с деталями бронирования */
+.booking-content #payment-type-info .common-details,
+.booking-content #payment-type-info .card-details-container {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+}
+
+/* Все подписи и значения внутри карточки */
+.booking-content #payment-type-info .common-details,
+.booking-content #payment-type-info .common-details *,
+.booking-content #payment-type-info .room-details,
+.booking-content #payment-type-info .room-details * {
+    color: #4A3A2E !important;
+}
+
+/* Название номера, тариф, даты и стоимость */
+.booking-content #payment-type-info .common-details strong,
+.booking-content #payment-type-info .common-details b,
+.booking-content #payment-type-info .room-details strong,
+.booking-content #payment-type-info .room-details b {
+    color: #4A3A2E !important;
+}
+
+/* Разделительные линии */
+.booking-content #payment-type-info .common-details hr,
+.booking-content #payment-type-info .room-details hr,
+.booking-content #payment-type-info .separator {
+    border-color: #2B2118 !important;
+    background-color: #2B2118 !important;
+}
+
+/* «Сумма к оплате» */
+.booking-content #payment-type-info .payment-sum,
+.booking-content #payment-type-info .payment-sum-label,
+.booking-content #payment-type-info .payment-total-label {
+    color: #2B2118 !important;
+}
+
+/* Итоговая сумма — оставляем красной */
+.booking-content #payment-type-info .payment-sum-value,
+.booking-content #payment-type-info .payment-total,
+.booking-content #payment-type-info .total-price {
+    color: #CA463C !important;
+}
+
+/* Информация о способах оплаты */
+.booking-content #payment-type-info .payment-info {
+    background: transparent !important;
+    color: #4A3A2E !important;
+}
+
+.booking-content #payment-type-info .payment-info *,
+.booking-content #payment-type-info .payment-description {
+    color: #4A3A2E !important;
+}
+
+.booking-content #payment-type-info .payment-info h1,
+.booking-content #payment-type-info .payment-info h2,
+.booking-content #payment-type-info .payment-info h3,
+.booking-content #payment-type-info .payment-info strong,
+.booking-content #payment-type-info .payment-info b {
+    color: #2B2118 !important;
+}
+
+/* Заголовок «Информация о гостях» */
+.booking-content #payment-type-info .guest-info-container > .header,
+.booking-content #payment-type-info .guest-info-container h2,
+.booking-content #payment-type-info .guest-info-container h3 {
+    color: #2B2118 !important;
+}
+
+/* Плашка с данными гостя */
+.booking-content #payment-type-info .guest-info-card-container {
+    background: #BFAD94 !important;
+    color: #4A3A2E !important;
+}
+
+/* Поля формы */
+.booking-content #payment-type-info input,
+.booking-content #payment-type-info select,
+.booking-content #payment-type-info textarea {
+    background: #F7F1E8 !important;
+    border: 1px solid #B58F6B !important;
+    color: #4A3A2E !important;
+    box-shadow: none !important;
+}
+
+.booking-content #payment-type-info input::placeholder,
+.booking-content #payment-type-info textarea::placeholder {
+    color: #4A3A2E !important;
+    opacity: 0.7;
+}
+
+/* Подписи возле полей */
+.booking-content #payment-type-info label,
+.booking-content #payment-type-info .input-label,
+.booking-content #payment-type-info .field-label {
+    color: #4A3A2E !important;
+}
+
+/* Ссылки и текст согласий */
+.booking-content #payment-type-info .confirm-container,
+.booking-content #payment-type-info .confirm-container *,
+.booking-content #payment-type-info .agreement-container {
+    color: #4A3A2E !important;
+}
+
+.booking-content #payment-type-info a {
+    color: #2B2118 !important;
+}
+
+/* Чекбоксы */
+.booking-content #payment-type-info input[type="checkbox"] {
+    accent-color: #B58F6B !important;
+}
+
+/* Главная кнопка подтверждения — красная */
+.booking-content #payment-type-info #booking-confirm,
+.booking-content #payment-type-info .confirm-button {
+    background: #CA463C !important;
+    border-color: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+.booking-content #payment-type-info #booking-confirm:hover,
+.booking-content #payment-type-info .confirm-button:hover {
+    background: #B53D35 !important;
+    border-color: #B53D35 !important;
+}
+
+/* Кнопки отмены и возврата */
+.booking-content #payment-type-info .cancel-button,
+.booking-content #payment-type-info .refuse-button,
+.booking-content #payment-type-info .button-cancel {
+    background: #F7F1E8 !important;
+    border: 1px solid #2B2118 !important;
+    color: #2B2118 !important;
+}
