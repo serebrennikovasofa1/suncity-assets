@@ -961,6 +961,9 @@ label
     min-width: 0 !important;
     max-width: max-content !important;
     flex: 0 0 auto !important;
+    height: 25px !important;
+    display: inline-flex !important;
+    align-items: center !important;
 }
 
 #ecvi-booking-container:has(
