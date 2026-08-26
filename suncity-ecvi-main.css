@@ -1,30 +1,48 @@
-@import url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@82d603d9d6fd6c98e8a5022467a4417b5cd39836/suncity-ecvi.css");
+@import url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@main/suncity-ecvi.css?v=2");
 
 @media screen and (max-width: 867px) {
-    /* Уменьшаем верхний и нижний отступ плашки */
+    /* Меньше сверху, немного свободного места снизу */
     #ecvi-booking-container .search-container {
-        padding-top: 14px !important;
-        padding-bottom: 12px !important;
+        padding: 4px 12px 18px !important;
     }
 
-    /* Уменьшаем вертикальные расстояния между элементами */
+    /* Компактнее расстояния между датами и кнопкой */
     #ecvi-booking-container
     .search-container
-    > .search-container-item {
+    .search-container-item {
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
         margin-top: 0 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 5px !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
 
     #ecvi-booking-container
     .search-container
-    > .search-container-item:last-child {
+    .search-container-item:last-child {
         margin-bottom: 0 !important;
     }
 
-    /* Уменьшаем расстояние перед кнопкой */
+    /* Увеличиваем ширину полей и кнопки */
+    #ecvi-booking-container
+    .widget-date-container,
+    #ecvi-booking-container
+    .calendar-container,
+    #ecvi-booking-container
+    .date-info-block,
+    #ecvi-booking-container
+    .widget-choose-date,
+    #ecvi-booking-container
+    #new-search {
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Почти убираем пространство перед кнопкой */
     #ecvi-booking-container #new-search {
-        margin-top: 4px !important;
+        margin-top: 0 !important;
     }
 }
