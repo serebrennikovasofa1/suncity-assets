@@ -1,0 +1,30 @@
+@import url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@82d603d9d6fd6c98e8a5022467a4417b5cd39836/suncity-ecvi.css");
+
+@media screen and (max-width: 867px) {
+    /* Уменьшаем верхний и нижний отступ плашки */
+    #ecvi-booking-container .search-container {
+        padding-top: 14px !important;
+        padding-bottom: 12px !important;
+    }
+
+    /* Уменьшаем вертикальные расстояния между элементами */
+    #ecvi-booking-container
+    .search-container
+    > .search-container-item {
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    #ecvi-booking-container
+    .search-container
+    > .search-container-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Уменьшаем расстояние перед кнопкой */
+    #ecvi-booking-container #new-search {
+        margin-top: 4px !important;
+    }
+}
