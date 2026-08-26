@@ -991,3 +991,14 @@ label
 .choosen-block-info-item {
     color: #767675 !important;
 }
+/* Цвет подписей над датами — на всех страницах */
+#ecvi-booking-container
+.search-container
+.search-container-item
+.header,
+#ecvi-booking-container
+.widget-date-container
+.calendar-container
+.header {
+    color: #2B2118 !important;
+}
