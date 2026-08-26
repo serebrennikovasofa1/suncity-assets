@@ -3,7 +3,7 @@
 @media screen and (max-width: 867px) {
     /* Одинаковое пространство сверху и снизу */
     #ecvi-booking-container .search-container {
-        padding: 18px 12px !important;
+        padding: 10px 12px !important;
     }
 
     /* Компактные вертикальные расстояния */
