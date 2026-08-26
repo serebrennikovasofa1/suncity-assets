@@ -574,3 +574,365 @@ label
 .select-block-button-container:has(> #addOne) {
     display: none !important;
 }
+/* =========================================================
+   ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ КОЙКО-МЕСТ
+   ========================================================= */
+
+/* Цвет текста «1 место / 1 взрослый / 1690 руб.» */
+#ecvi-booking-container
+.avaliable-item
+.choosen-block-info-list
+.choosen-block-info-item,
+
+#ecvi-booking-container
+.choosen-block-info-mobile {
+    color: #4A3A2E !important;
+}
+
+
+/*
+   Если выбрано койко-место, скрываем глобальную кнопку
+   «Добавить номер другой категории».
+*/
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container:not(.hide)
+)
+.add-another-category-room {
+    display: none !important;
+}
+
+
+/*
+   Только при выборе койко-места визуально заменяем
+   «1 КОМНАТА» на «1 МЕСТО».
+*/
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container:not(.hide)
+)
+#finalResults
+.result-section-item:first-child {
+    font-size: 0 !important;
+}
+
+#ecvi-booking-container:has(
+    #spot-section
+    .avaliable-item:not([data-parentid="false"])
+    .price-info-container:not(.hide)
+)
+#finalResults
+.result-section-item:first-child::after {
+    content: "1 МЕСТО";
+    color: #2C1F0E;
+    font-family: OpenSansBold;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+
+/* =========================================================
+   ПОСЛЕДНИЙ ШАГ — ФОРМА БРОНИРОВАНИЯ
+   ========================================================= */
+
+/* Верхняя панель «Бронирование» */
+#ecvi-booking-container
+#payment-type-info
+.booking_details > .container > .header {
+    background: #BFAD94 !important;
+    color: #2B2118 !important;
+}
+
+/* «Назад» в верхней панели */
+#ecvi-booking-container
+#payment-type-info
+.booking_details > .container > .header
+.return-back {
+    color: #2B2118 !important;
+}
+
+/* Карточка с информацией о бронировании */
+#ecvi-booking-container
+#payment-type-info
+.card-details-container
+.common-details {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+}
+
+/* Основной текст и подписи внутри карточки */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.hotel-info,
+
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.detail-text,
+
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.detail-container span,
+
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.hotel-name {
+    color: #4A3A2E !important;
+}
+
+/* Значения: даты, тариф, категория и цена */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.text-description {
+    color: #4A3A2E !important;
+}
+
+/* Фон текста, перекрывающего разделительные линии */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.text-description span {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+}
+
+/* Разделительные линии в карточке */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.text-description::before {
+    background: #BFAD94 !important;
+}
+
+/* Линия над итоговой стоимостью */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.price-block {
+    border-color: #BFAD94 !important;
+}
+
+/* «Сумма к оплате» */
+#ecvi-booking-container
+#payment-type-info
+.total-price span {
+    color: #2B2118 !important;
+}
+
+/* Саму итоговую сумму оставляем красной */
+#ecvi-booking-container
+#payment-type-info
+.total-price
+.total-price-num {
+    color: #CA463C !important;
+}
+
+/* «Свернуть / развернуть» */
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.more-info,
+
+#ecvi-booking-container
+#payment-type-info
+.common-details
+.show-details {
+    color: #4A3A2E !important;
+    border-color: #B58F6B !important;
+}
+
+/* Кнопка «Отменить» внутри карточки */
+#ecvi-booking-container
+#payment-type-info
+.refuse-booking,
+
+#ecvi-booking-container
+#payment-type-info
+#cancelReservation {
+    background: transparent !important;
+    color: #2B2118 !important;
+    border-color: #2B2118 !important;
+}
+
+
+/* =========================================================
+   СПОСОБЫ ОПЛАТЫ
+   ========================================================= */
+
+#ecvi-booking-container
+#payment-type-info
+.payment-info,
+
+#ecvi-booking-container
+#payment-type-info
+.payment-info p,
+
+#ecvi-booking-container
+#payment-type-info
+.payment-info li {
+    color: #4A3A2E !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.payment-info > p:first-child {
+    color: #2B2118 !important;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ИНФОРМАЦИЯ О ГОСТЯХ
+   ========================================================= */
+
+/* Заголовок */
+#ecvi-booking-container
+#payment-type-info
+.guest-info-container-header {
+    color: #2B2118 !important;
+}
+
+/* Бежевая панель с полями */
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container {
+    background: #BFAD94 !important;
+}
+
+/* Поля ввода */
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container input,
+
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container textarea {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+    border-color: #B58F6B !important;
+}
+
+/* Текст-подсказки */
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container
+.detail-text {
+    color: #4A3A2E !important;
+}
+
+/* Placeholder в полях */
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container input::placeholder,
+
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container textarea::placeholder {
+    color: #4A3A2E !important;
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   ИКОНКИ ТЕЛЕФОНА И ПОЧТЫ
+   ========================================================= */
+
+/* Оставляем рамку, убираем старую синюю иконку */
+#ecvi-booking-container
+#payment-type-info
+.field-item.iconed::before {
+    background-image: none !important;
+    background-color: transparent !important;
+    border-color: #B58F6B !important;
+}
+
+/* Новая иконка нужного цвета */
+#ecvi-booking-container
+#payment-type-info
+.field-item.iconed::after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    width: 16px;
+    height: 16px;
+    z-index: 21;
+
+    background: #4A3A2E;
+
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.field-item.iconed.phone::after {
+    -webkit-mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/phone.png");
+
+    mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/phone.png");
+}
+
+#ecvi-booking-container
+#payment-type-info
+.field-item.iconed.email::after {
+    -webkit-mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/mail.png");
+
+    mask-image:
+        url("https://ecvi.rt.ru/assets/formreservation/img/mail.png");
+}
+
+
+/* =========================================================
+   СОГЛАСИЯ И КНОПКА ПОДТВЕРЖДЕНИЯ
+   ========================================================= */
+
+#ecvi-booking-container
+#payment-type-info
+.confirm-text {
+    color: #4A3A2E !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.confirm-text a {
+    color: #2B2118 !important;
+}
+
+/* Цвет отметок в чекбоксах */
+#ecvi-booking-container
+#payment-type-info
+#confident-checkbox,
+
+#ecvi-booking-container
+#payment-type-info
+#agreement-checkbox {
+    accent-color: #B58F6B;
+}
+
+/* Финальная кнопка подтверждения */
+#ecvi-booking-container
+#payment-type-info
+#booking-confirm {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+#booking-confirm:hover {
+    background: #B53D35 !important;
+}
