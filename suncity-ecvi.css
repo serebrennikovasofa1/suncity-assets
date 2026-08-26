@@ -957,6 +957,10 @@ label
     .price-info-container.shown
 ) #finalResults .result-section-item:first-child {
     font-size: 0 !important;
+    width: fit-content !important;
+    min-width: 0 !important;
+    max-width: max-content !important;
+    flex: 0 0 auto !important;
 }
 
 #ecvi-booking-container:has(
