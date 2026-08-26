@@ -964,6 +964,7 @@ label
     height: 25px !important;
     display: inline-flex !important;
     align-items: center !important;
+    vertical-align: top !important;
 }
 
 #ecvi-booking-container:has(
@@ -989,10 +990,4 @@ label
 .avaliable-item:not([data-parentid="false"])
 .choosen-block-info-item {
     color: #767675 !important;
-}
-#ecvi-booking-container
-.booking-header-info
-#finalResults
-.result-section-item {
-    vertical-align: top !important;
 }
