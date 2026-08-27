@@ -559,21 +559,6 @@ label
     display: none !important;
 }
 
-/* Скрываем «Добавить ещё одно место» только у койко-мест */
-#ecvi-booking-container
-#spot-section
-.avaliable-item:not([data-parentid="false"])
-#addOne {
-    display: none !important;
-}
-
-/* Убираем пустой контейнер от скрытой кнопки */
-#ecvi-booking-container
-#spot-section
-.avaliable-item:not([data-parentid="false"])
-.select-block-button-container:has(> #addOne) {
-    display: none !important;
-}
 /* =========================================================
    ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ КОЙКО-МЕСТ
    ========================================================= */
