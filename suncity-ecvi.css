@@ -56,10 +56,10 @@ label
 .date-info-block__date::after {
     background: #2C1F0E !important;
     -webkit-mask:
-        url("https://ecvi.rt.ru/assets/formreservation/img/calendar.png")
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/calendar.png")
         center / contain no-repeat;
     mask:
-        url("https://ecvi.rt.ru/assets/formreservation/img/calendar.png")
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/calendar.png")
         center / contain no-repeat;
 }
 
@@ -68,10 +68,10 @@ label
 .date-info-block__time::after {
     background: #2C1F0E !important;
     -webkit-mask:
-        url("https://ecvi.rt.ru/assets/formreservation/img/clock.png")
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/clock.png")
         center / contain no-repeat;
     mask:
-        url("https://ecvi.rt.ru/assets/formreservation/img/clock.png")
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/clock.png")
         center / contain no-repeat;
 }
 
@@ -252,12 +252,12 @@ label
     background-color: #767675;
 
     -webkit-mask-image:
-        url("https://ecvi.rt.ru/assets/formreservation/img/hotel_options.png");
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/hotel_options.png");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: var(--option-icon-position);
 
     mask-image:
-        url("https://ecvi.rt.ru/assets/formreservation/img/hotel_options.png");
+        url("https://cdn.jsdelivr.net/gh/serebrennikovasofa1/suncity-assets@5dbecbb87f10b6af2479614bd9d36abe0a1da6af/hotel_options.png");
     mask-repeat: no-repeat;
     mask-position: var(--option-icon-position);
 }
