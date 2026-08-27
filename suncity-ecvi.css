@@ -589,21 +589,6 @@ label
     color: #4A3A2E !important;
 }
 
-
-/*
-   Если выбрано койко-место, скрываем глобальную кнопку
-   «Добавить номер другой категории».
-*/
-#ecvi-booking-container:has(
-    #spot-section
-    .avaliable-item:not([data-parentid="false"])
-    .price-info-container:not(.hide)
-)
-.add-another-category-room {
-    display: none !important;
-}
-
-
 /*
    Только при выборе койко-места визуально заменяем
    «1 КОМНАТА» на «1 МЕСТО».
@@ -939,16 +924,6 @@ label
 /* =========================================================
    SUN CITY — ИСПРАВЛЕНИЯ ВЫБРАННОГО МЕСТА
    ========================================================= */
-
-/* Скрываем «Добавить номер другой категории»
-   только при выборе категории «Место в стандарте…» */
-#ecvi-booking-container:has(
-    #spot-section
-    .avaliable-item:not([data-parentid="false"])
-    .price-info-container.shown
-) .add-another-category-room {
-    display: none !important;
-}
 
 /* Для места заменяем «1 КОМНАТА» на «1 МЕСТО» */
 #ecvi-booking-container:has(
