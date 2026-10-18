@@ -1,0 +1,30 @@
+/* SUN CITY — minimal functional ECVI overrides
+   Keep this file intentionally small for Safari/iPad stability.
+*/
+
+/* ECVI official food block: hotel has no "without meals" option */
+#nutrition {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    #rate {
+        width: 200% !important;
+    }
+}
+
+/* Bed-space products only: hide child selector.
+   Whole-room products have data-parentid="false". */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.child-selection {
+    display: none !important;
+}
+
+/* Hide the "Без питания" result chip in the booking summary. */
+#ecvi-booking-container
+.booking-header-info
+.result-section-item:nth-child(4) {
+    display: none !important;
+}
