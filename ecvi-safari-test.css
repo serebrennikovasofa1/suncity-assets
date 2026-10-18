@@ -1,0 +1,10 @@
+/* ECVI Safari test — intentionally minimal */
+html,
+body,
+#ecvi-booking-container {
+    background: #EBDFD8 !important;
+}
+
+#ecvi-booking-container .search-container {
+    background: #BFAD94 !important;
+}
