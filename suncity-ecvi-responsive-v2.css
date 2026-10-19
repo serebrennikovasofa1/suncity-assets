@@ -1,0 +1,526 @@
+/* =========================================================
+   SUN CITY — ECVI SAFE STYLING
+   Functional rules + visual styling.
+   No :has(), no external masks, no custom image assets.
+   ========================================================= */
+
+/* ---------- FUNCTIONAL RULES ---------- */
+
+/* Hotel does not offer a "without meals" option */
+#nutrition {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    #rate {
+        width: 200% !important;
+    }
+}
+
+/* Bed-space products only: hide child selector */
+#ecvi-booking-container
+#spot-section
+.avaliable-item:not([data-parentid="false"])
+.child-selection {
+    display: none !important;
+}
+
+/* Hide the "Без питания" chip in booking summary */
+#ecvi-booking-container
+.booking-header-info
+.result-section-item:nth-child(4) {
+    display: none !important;
+}
+
+
+/* ---------- BASE COLORS ---------- */
+
+html,
+body,
+.wrapper,
+.maincontent,
+.booking-content,
+#ecvi-booking-container {
+    background: transparent !important;
+    color: #2B2118 !important;
+}
+
+
+/* ---------- SEARCH PANEL ---------- */
+
+#ecvi-booking-container .search-container {
+    background: #BFAD94 !important;
+    border-radius: 22px !important;
+    padding: 18px 24px !important;
+}
+
+#ecvi-booking-container
+.search-container
+.search-container-item
+.header,
+#ecvi-booking-container
+.widget-date-container
+.calendar-container
+.header {
+    color: #2B2118 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+#ecvi-booking-container
+.widget-date-container
+.calendar-container
+label
+.date-info-block,
+#ecvi-booking-container
+.widget-choose-date {
+    background: #F7F1E8 !important;
+    color: #2C1F0E !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+#ecvi-booking-container
+.date-info-block__date,
+#ecvi-booking-container
+.date-info-block__time {
+    color: #2C1F0E !important;
+}
+
+/* Tone down ECVI's blue calendar/clock icons without replacing assets */
+#ecvi-booking-container .date-info-block__date::after,
+#ecvi-booking-container .date-info-block__time::after {
+    filter: grayscale(1) sepia(.25) brightness(.55) !important;
+}
+
+#ecvi-booking-container #new-search {
+    background: #B58F6B !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+#ecvi-booking-container #new-search:hover {
+    background: #9F7958 !important;
+}
+
+#ecvi-booking-container #new-search .new-search-text,
+#ecvi-booking-container #new-search .new-search__text,
+#ecvi-booking-container #new-search .book-text {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+
+/* ---------- RESULTS PAGE ---------- */
+
+#ecvi-booking-container .tarif-selection-container,
+#ecvi-booking-container .avaliable-rate-container,
+#ecvi-booking-container .rooms-section,
+#ecvi-booking-container .section-header-container,
+#ecvi-booking-container .section-header-container .section-header {
+    background-color: #EBDFD8 !important;
+}
+
+#ecvi-booking-container
+.section-header-container
+.section-header {
+    color: #2B2118 !important;
+}
+
+#ecvi-booking-container
+.section-header-container::after {
+    background: #2B2118 !important;
+}
+
+#ecvi-booking-container
+.avaliable-item
+.avaliable-item-block
+.avaliable-item-description
+.description
+.header,
+#ecvi-booking-container
+.avaliable-item-block
+.header.header-name-mobile,
+#ecvi-booking-container
+.avaliable-item
+.additional-info-list
+.additional-info-item
+.header,
+#ecvi-booking-container
+.avaliable-item
+.additional-info-list
+.additional-info-item
+.text {
+    color: #4A3A2E !important;
+}
+
+#ecvi-booking-container
+.avaliable-item
+.avaliable-item-description
+.description
+.more-detail {
+    color: #2B2118 !important;
+    border-color: #2B2118 !important;
+}
+
+#ecvi-booking-container .resource-start-price,
+#ecvi-booking-container .resource-start-price *,
+#ecvi-booking-container .resource-start-price-mobile,
+#ecvi-booking-container .resource-start-price-mobile *,
+#ecvi-booking-container .tarif-start-price,
+#ecvi-booking-container .tarif-start-price * {
+    color: #4A3A2E !important;
+}
+
+/* Tone down blue amenity icons without replacing the sprite */
+#ecvi-booking-container .options-icons-list .options-icons-item {
+    filter: grayscale(1) sepia(.25) brightness(.62) !important;
+}
+
+
+/* ---------- BOTTOM SELECTION BAR ---------- */
+
+#ecvi-booking-container .booking-header-info {
+    background: #BFAD94 !important;
+}
+
+#ecvi-booking-container
+.booking-header-info
+.result-section > span,
+#ecvi-booking-container
+.booking-header-info
+.price-num {
+    color: #2C1F0E !important;
+}
+
+#ecvi-booking-container
+.booking-header-info
+.result-section-item {
+    background: #F7F1E8 !important;
+    color: #2C1F0E !important;
+}
+
+#ecvi-booking-container
+.booking-header-info
+.go-to-payment {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ---------- ROOM / BED SELECTION ---------- */
+
+#ecvi-booking-container
+.price-info-container
+.price-categories-item,
+#ecvi-booking-container
+.pseudo-select-container,
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-container-results {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+    border-color: #BFAD94 !important;
+}
+
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-item:hover,
+#ecvi-booking-container
+.pseudo-select-container
+.pseudo-select-item.active {
+    background: #BFAD94 !important;
+    color: #2B2118 !important;
+}
+
+#ecvi-booking-container
+.select-block-button-container
+.add-one {
+    background: #B58F6B !important;
+    color: #FFFFFF !important;
+}
+
+#ecvi-booking-container
+.select-block-button-container
+.proceed {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+#ecvi-booking-container
+.select-block-button-container
+.refuse-one {
+    background: #F7F1E8 !important;
+    color: #2B2118 !important;
+    border-color: #2B2118 !important;
+}
+
+
+/* ---------- FINAL BOOKING FORM ---------- */
+
+#ecvi-booking-container
+#payment-type-info
+.booking_details > .container > .header {
+    background: #BFAD94 !important;
+    color: #2B2118 !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.card-details-container
+.common-details {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container {
+    background: #BFAD94 !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container input,
+#ecvi-booking-container
+#payment-type-info
+.guest-info-card-container textarea {
+    background: #F7F1E8 !important;
+    color: #4A3A2E !important;
+    border-color: #B58F6B !important;
+}
+
+#ecvi-booking-container
+#payment-type-info
+#booking-confirm {
+    background: #CA463C !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet / compact desktop */
+@media screen and (min-width: 640px) and (max-width: 1199px) {
+    #ecvi-booking-container .search-container {
+        padding: 16px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    #ecvi-booking-container .search-container > .container {
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Phones: force a clean vertical layout and reset ECVI's fixed/float geometry */
+@media screen and (max-width: 639px) {
+    html,
+    body,
+    #ecvi-booking-container {
+        width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    #ecvi-booking-container .search-container {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 16px !important;
+        border-radius: 18px !important;
+    }
+
+    #ecvi-booking-container .search-container > .container {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .search-container
+    .search-container-item,
+    #ecvi-booking-container
+    .search-container
+    .search-container-item.widget-date-container,
+    #ecvi-booking-container
+    .search-container
+    .search-container-item.new-search {
+        display: block !important;
+        float: none !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .row-fluid.date-block {
+        display: block !important;
+        float: none !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 0 14px !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .calendar-container {
+        display: block !important;
+        float: none !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .calendar-container
+    .header {
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 7px !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .calendar-container
+    label {
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .calendar-container
+    label
+    .date-info-block {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        position: relative !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        min-height: 52px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 10px 12px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #ecvi-booking-container
+    .date-info-block__date,
+    #ecvi-booking-container
+    .date-info-block__time {
+        display: inline-flex !important;
+        align-items: center !important;
+        float: none !important;
+        position: relative !important;
+        width: auto !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+
+    #ecvi-booking-container
+    .search-container
+    .search-container-item.new-search {
+        margin-top: 2px !important;
+    }
+
+    #ecvi-booking-container #new-search {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        min-height: 52px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 12px 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    #ecvi-booking-container
+    #new-search
+    .new-search-text,
+    #ecvi-booking-container
+    #new-search
+    .new-search__text,
+    #ecvi-booking-container
+    #new-search
+    .book-text {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* Very narrow phones */
+@media screen and (max-width: 359px) {
+    #ecvi-booking-container .search-container {
+        padding: 12px !important;
+    }
+
+    #ecvi-booking-container
+    .date-info-block__date,
+    #ecvi-booking-container
+    .date-info-block__time {
+        font-size: 16px !important;
+    }
+
+    #ecvi-booking-container
+    .widget-date-container
+    .calendar-container
+    label
+    .date-info-block {
+        gap: 8px !important;
+        padding: 9px 10px !important;
+    }
+}
